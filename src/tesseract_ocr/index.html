@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ocr</title>
+  <script defer src="./lib/tesseract.js/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="drag-area" contentEditable="false">
+      <span class="text">拖拽图片到此处</span>
+      <div>或按Ctrl+V粘贴图像到此处</div>
+      <div class="upload-box">
+        <input type="file" name="file" multiple="multiple" id="file" style="display: none;" />
+        <span id="upload">点击选图片</span>
+      </div>
+    </div>
+    <textarea name="" id="result" cols="30" rows="10" placeholder="识别结果在此显示，可编辑" class="result"></textarea>
+  </div>
+  
+  <div id="status" class="status-tip">
+    <p>状态：<span>图片识别中</span></p>
+    <p>进度：<span class="progress">10%</span></p>
+  </div>
+</body>
+</html>

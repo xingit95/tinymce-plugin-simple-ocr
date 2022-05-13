@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  overflow-y: hidden;
+  margin: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  padding: 10px;
+  align-items: stretch;
+  overflow: hidden;
+  .result {
+    flex: 2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+}
+
+/* 提示 */
+.status-tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  color: #fff;
+  display: none;
+  & > p {
+    margin: 0 10px;
+  }
+  &.show {
+    display: flex;
+  }
+}
+/* 图片选择区 */
+#drag-area {
+  min-width: 210px;
+  min-height: 200px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px dashed #c3c3c3;
+  outline: none;    
+  color: transparent; 
+  text-shadow: 0 0 0 #000;
+  .text {
+    color: #555;
+    font-size: 20px;
+  }
+  .upload-box {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+}
+#upload {
+  display: inline-block;
+  padding: 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px dashed #c3c3c3;
+  cursor: pointer;
+  &:hover {
+    background-color: #fafafa;
+  }
+}
